@@ -9,7 +9,7 @@ import { _getColorNameOrEmoticon } from '../src/util/blaze.mjs';
 
 figlet('Blaze with Telegram', (_, screen) => {
     console.log(gradient.vice(screen));
-    console.log('       ' + gradient.cristal('by: Elizandro Dantas'));
+    console.log('       ' + gradient.cristal('by: Elizandro Dantas fk:Sm1g00l'));
     console.log();
     start();
 });
@@ -28,7 +28,7 @@ async function start(){
                 loss: "loss.jpg",
             },
             timeAfterLoss: {
-                time: 1,
+                time: 5,
                 message: "Tempo para analise apos loss"
             },
             summaryOfResult: {
@@ -45,11 +45,19 @@ async function start(){
                 // cb('test callback');
         
                 return "🔎 <b>SINAL ENCONTRADO:</b>\n" +
-                    `\nENTRE NO ${_getColorNameOrEmoticon(current.color, { emoticon: true })} ${_getColorNameOrEmoticon(current.color, { pt: true, upper: true })}` +
-                    `\nPROTEJA NO ${_getColorNameOrEmoticon(0, { emoticon: true })} ${_getColorNameOrEmoticon(0, { pt: true, upper: true })}` +
+                    `\nENTRE NO ${_getColorNameOrEmoticon(0, { emoticon: true })} ${_getColorNameOrEmoticon(0, { pt: true, upper: true })}\n` +
+                    `\n5 ENTRADAS COM O MESMO VALOR` +
                     `\n\n<pre>https://blaze.com/</pre>`;
             },
-            gale: 1
+            gale: 4,
+            analysis: [
+                {
+                    entryColor: "white",
+                    search: [
+                        { color: "white" },
+                    ]
+                }
+            ]
          })
 
     await controllerBot.run();

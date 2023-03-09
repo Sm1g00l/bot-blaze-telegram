@@ -290,6 +290,7 @@ Telegram.prototype.sendResult = async function(result, clientId, infoBet = false
 
         message.push('🔸 ENTRAMOS NO ' + this._getColorNameOrEmoticon(infoBet.colorBet, true));
         message.push('🔹 RESULTADO FOI ' + this._getColorNameOrEmoticon(infoBet.colorLast, true));
+        message.push('🔹SE FOR LOSS MARTINGALE ');
 
         await this.send(message.join('\n'), clientId, { parse_mode: "HTML" });
     }
